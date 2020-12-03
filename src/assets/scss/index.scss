@@ -21,7 +21,7 @@ body {
     img, svg {
       width: 100%;
       height: auto;
-      max-width: 50rem;
+      max-width: 45rem;
     }
 
     .numbers {
@@ -65,12 +65,19 @@ body {
           display: inline-block;
           transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
           transform: translateY(0);
+          margin: 0 0.3rem;
   
           i {
-            font-size: 21px;
+            font-size: 4rem;
             color: white;
-            height: 40px;
-            width: 40px;
+
+            @include small {
+              font-size: 3rem;
+            }
+
+            @include medium {
+              font-size: 2rem;
+            }
           }
         }
   

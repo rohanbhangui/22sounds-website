@@ -1,6 +1,7 @@
 const path = require("path");
 
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //installed via npm
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -56,9 +57,10 @@ module.exports = {
         test: /\.ico$/, 
         loader: 'file-loader',
         options: {
-          name: './[name].[ext]',
+          name: '/[name].[ext]',
         }, 
-      }
+      },
+
     ]
   },
   output: {
@@ -70,6 +72,11 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "assets/styles/index.css",
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/assets/img/favicon", to: "/favicon" },
+      ],
+    }),
   ]
 };
