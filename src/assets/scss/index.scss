@@ -21,7 +21,7 @@ body {
     img, svg {
       width: 100%;
       height: auto;
-      max-width: 45rem;
+      max-width: 30rem;
     }
 
     .numbers {
@@ -68,16 +68,8 @@ body {
           margin: 0 0.3rem;
   
           i {
-            font-size: 4rem;
+            font-size: 1.5rem;
             color: white;
-
-            @include small {
-              font-size: 3rem;
-            }
-
-            @include medium {
-              font-size: 2rem;
-            }
           }
         }
   
