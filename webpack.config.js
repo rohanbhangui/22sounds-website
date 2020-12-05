@@ -26,6 +26,12 @@ module.exports = {
               implementation: require("sass"),
             },
           },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: require(path.join(process.cwd(), "src/assets/scss/utils.js"))
+            }
+          }
         ]
       },
       {

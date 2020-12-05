@@ -1,5 +1,7 @@
 require('./assets/scss/index.scss');
 
+const rolly = require("rolly.js");
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const LOADING_TIMER = 500;
@@ -15,4 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.querySelector(".social").classList.add("active");
   }, LOADING_TIMER+2750);
+
+  // const r = rolly({
+  //   view: document.querySelector('.container-wrapper'),
+  //   native: true,
+  //   // other options
+  // });
+  // r.init();
 });

@@ -1,0 +1,41 @@
+#container-2 {
+  .header {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    background: red;
+    width: 100%;
+    color: white;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    color: white;
+
+    &.nimbus {
+      font-family: nimbus-sans-extended, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    &.pragmatic {
+      font-family: pragmatica-extended, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    &.aktiv {
+      font-family: aktiv-grotesk-extended, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+  }
+
+  h5 {
+    color: white;
+    margin-top: 3rem;
+  }
+}
