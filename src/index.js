@@ -21,9 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       document.querySelector(".sounds-text").classList.add("active");
     }, LOADING_TIMER+1750);
-    setTimeout(() => {
+    
+    if(window.scrollY >= window.innerHeight/2) {
       document.querySelector("header.header").classList.add("show");
-    }, LOADING_TIMER+2750);
+    }
+    else {
+      setTimeout(() => {
+        document.querySelector("header.header").classList.add("show");
+      }, LOADING_TIMER+2750);
+    }
 
     // const r = rolly({
     //   view: document.querySelector('.container-wrapper'),
