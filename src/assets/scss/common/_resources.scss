@@ -10,7 +10,7 @@ $font-secondary: nimbus-sans-extended, sans-serif;
   font-family: $font-secondary;
   font-weight: 900;
   font-style: normal;
-  transform: scaleX(0.9);
+  transform: scaleX(0.9) translateX(5%);
   transform-origin: top left;
   text-transform: uppercase;
   line-height: 1;

@@ -67,9 +67,10 @@
 
         h2 {
           text-shadow: 0 2px 4px rgba(0, 0, 0, 0.11);
+          margin-left: -5%;
           
           @include x-large {
-            margin-left: -15%;
+            margin-left: -20%;
           }
 
           .em {
