@@ -52,56 +52,87 @@
 
 
 .h1, h1 {
-	font-size: 82px;
-	letter-spacing: -3px;
-  margin: 0;
-  @include bold-ext;
+	$base-size: 50px;
+	$base-letter-spacing: -2px;
 
-	@include xx-large {
-		font-size: 128px;
-		letter-spacing: -6.8px;
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
+  margin: 0;
+	@include bold-ext;
+	
+	@include small {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
 	}
 }
 
 .h2, h2 {
-	font-size: 60px;
-	letter-spacing: -2px;
+	$base-size: 42px;
+	$base-letter-spacing: -2px;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
 	font-weight: 500;
-  margin: 0;
   @include bold-ext;
 
-	@include xx-large {
-		font-size: 100px;
-		letter-spacing: -3.8px;
+	@include small {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
 	}
 }
 
 .h3, h3 {
-	font-size: 35px;
+	$base-size: 35px;
+	$base-letter-spacing: -0.66px;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
 	font-weight: 600;
-	letter-spacing: -0.66px;
-  margin: 0 0 30px;
 	@include bold-ext;
+
 	background: linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
 	background-position: 0 100%;
 	background-repeat: repeat-x;
 	background-size: 4px 25%;
 
-	@include xx-large {
-		font-size: 57.5px;
-		letter-spacing: -3.05px;
+	@include small {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
 	}
 }
 
 .h4, h4 {
-	font-size: 21px;
-	letter-spacing: -0.33px;
+	$base-size: 21px;
+	$base-letter-spacing: -0.33px;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
   font-weight: 400;
   @include bold-ext;
 
-	@include xx-large {
-		font-size: 35.5px;
-		letter-spacing: -0.66px;
+	@include small {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
 	}
 }
 
@@ -111,7 +142,7 @@
   font-weight: 400;
   @include bold-ext;
 
-	// @include xx-large {
+	// @include x-large {
 	// 	font-size: 35.5px;
 	// 	letter-spacing: -0.66px;
 	// }
