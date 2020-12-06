@@ -1,18 +1,33 @@
 //Common Styles
 .button, button {
 	text-decoration: none;
-	padding: 15px 30px;
+	padding: 10px 15px;
 	text-transform: uppercase;
-	font-family: $font-secondary;
+	font-family: $font-primary;
 	font-size: 13px;
 	letter-spacing: 1px;
 	cursor: pointer;
 	text-align: center;
 
 	&.primary {
-		background: $color-primary;
-		border: 2px solid $color-primary;
-		color: #fff;
+		background: $color-primary linear-gradient(to bottom, white 99%, $color-primary 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: white;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: $color-primary linear-gradient(90deg, white 99%, $color-primary 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
 	}
 
 	&.secondary {

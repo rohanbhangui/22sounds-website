@@ -1,9 +1,12 @@
 #container-2 {
   color: white;
 
-
   .restrict-container {
-    margin: 8rem auto;
+    margin: 4rem auto;
+    
+    @include medium {
+      margin: 8rem auto;
+    }
 
     .grid-container {
       display: flex;

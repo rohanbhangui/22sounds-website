@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
           perView: 1.5
         },
         400: {
-          perView: 1
+          perView: 1.2
         }
       }
     }).mount()
