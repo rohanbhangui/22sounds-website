@@ -1,0 +1,45 @@
+#container-1 {
+  height: calc(100vh - #{$header-height});
+
+  .flex-container {
+    height: 100%;
+
+    .img-container {
+      padding: 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: relative;
+  
+      img, svg {
+        width: 100%;
+        height: auto;
+        width: 60vmin;
+      }
+  
+      .numbers {
+        opacity: 0;
+  
+        &.active {
+          opacity: 1;
+          transition: opacity 1s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+      }
+  
+      .sounds-text {
+        
+        transform: translateY(5rem);
+        position: relative;
+        opacity: 0;
+  
+        &.active {
+          transition: opacity 1.25s cubic-bezier(0.77, 0, 0.175, 1), transform 1.25s cubic-bezier(0.77, 0, 0.175, 1);
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

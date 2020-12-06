@@ -1,0 +1,78 @@
+#container-3 {
+  color: white;
+  overflow: hidden;
+
+  h3 {
+    display: inline-block;
+  }
+
+  .glide__track {
+    overflow: visible;
+
+    .glide__slide {
+      .tile {
+        max-width: 30rem;
+        display: inline-block;
+        opacity: 0.33;
+        transition: opacity 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          // transform: scale(0.8);
+          // opacity: 0.33;
+          // transform-origin: bottom left;
+          transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .title {
+          margin-top: 1rem;
+          font-family: $font-primary;
+          font-weight: 500;
+          font-size: 1.5rem;
+          letter-spacing: -0.01rem;
+        }
+
+        .consume {
+          margin: 1rem 0;
+          a {
+            opacity: 0.5;
+            display: inline-block;
+            transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+            transform: translateY(0);
+            padding: 0 0.2rem;
+            margin: 0 0.1rem;
+      
+            i {
+              font-size: 1.5rem;
+              color: white;
+            }
+          }
+      
+          &:hover {
+            a {
+              opacity: 0.5;
+      
+              &:hover {
+                opacity: 1;
+                transform: translateY(-0.3rem);
+              }
+            }
+          }
+        }
+      }
+  
+      &--active {
+        .tile {
+          opacity: 1;
+          img {
+            // transform: scale(1);
+            opacity: 1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);
+          }
+        }
+      }
+    }
+  }
+}

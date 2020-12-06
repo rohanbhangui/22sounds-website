@@ -81,7 +81,11 @@
 	font-weight: 600;
 	letter-spacing: -0.66px;
   margin: 0 0 30px;
-  @include bold-ext;
+	@include bold-ext;
+	background: linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 25%;
 
 	@include xx-large {
 		font-size: 57.5px;
@@ -111,6 +115,21 @@
 	// 	font-size: 35.5px;
 	// 	letter-spacing: -0.66px;
 	// }
+}
+
+h6, .h6 {
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.33);
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.33);
 }
 
 .social-link {
@@ -154,4 +173,19 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+.restrict-container {
+	max-width: 75rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.sm {
+		max-width: 60rem;
+	}
+
+	&.lg {
+		max-width: 90rem;
+	}
 }

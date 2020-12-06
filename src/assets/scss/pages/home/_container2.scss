@@ -1,17 +1,14 @@
 #container-2 {
-  height: 100vh;
   color: white;
-  margin-bottom: 50vh;
+
 
   .restrict-container {
-    max-width: 1200px;
-    width: 100%;
     margin: 8rem auto;
 
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 0.8fr 1.2fr;
+      grid-template-rows: 1fr 0.6fr;
       gap: 0px 0px;
       grid-template-areas:
         "a a"
@@ -20,6 +17,7 @@
     
     .a {
       grid-area: a;
+      max-height: 45rem;
 
       img {
         width: 100%;
@@ -52,9 +50,11 @@
       padding: 3rem;
 
       p {
-        font-size: 0.9rem;
-        line-height: 1.35;
+        font-size: 1rem;
+        line-height: 1.5;
         margin-bottom: 1rem;
+        font-weight: normal;
+        color: rgba(255, 255, 255, 0.33);
       }
     }
     

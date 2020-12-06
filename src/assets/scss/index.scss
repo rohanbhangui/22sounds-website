@@ -1,23 +1,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 @import url("https://use.typekit.net/mfj0tti.css");
 
 @import '../../../node_modules/rolly.js/css/style.css';
 
 @import "common/base";
 
-@import "pages/container1";
-@import "pages/container2";
+@import "partials/header";
+@import "partials/social";
 
-html, body {
-  height: 100%;
-}
-
-body {
-  background: black;
-
-  .container-wrapper {
-    .container {
-      width: 100%;
-    }
-  }
-}
+@import "pages/home/home";
