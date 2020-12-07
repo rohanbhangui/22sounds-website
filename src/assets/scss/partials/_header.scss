@@ -68,6 +68,10 @@
       top: 1.5rem;
       right: 1.5rem;
 
+      @include large {
+        display: none;
+      }
+
       i {
         font-size: 1.8rem;
         cursor: pointer;
