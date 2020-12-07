@@ -47,12 +47,17 @@
   }
 
   video {
-    opacity: 0.66;
+    opacity: 0;
     position: absolute;
     top: 0;
     z-index: 0;
     width: 100%;
     height: 100vh;
     object-fit: cover;
+
+    &.show {
+      opacity: 0.66;
+      transition: opacity 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+    }
   }
 }
