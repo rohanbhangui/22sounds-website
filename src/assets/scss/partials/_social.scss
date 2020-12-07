@@ -2,9 +2,8 @@
   flex: 0 0 100%;
   display: flex;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  height: $header-height;
+  opacity: 1;
+  pointer-events: auto;
   align-items: center;
 
   &.active {
