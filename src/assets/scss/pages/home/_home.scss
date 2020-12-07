@@ -17,11 +17,11 @@ body.index {
       width: 100%;
     }
 
-    @import "container1";
-    @import "container2";
-    @import "container3";
-    @import "container4";
-    @import "container5";
-    @import "container6";
+    @import "container/container1";
+    @import "container/container2";
+    @import "container/container3";
+    @import "container/container4";
+    @import "container/container5";
+    @import "container/container6";
   }
 }
