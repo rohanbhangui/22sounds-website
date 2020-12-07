@@ -1,0 +1,27 @@
+#container-6 {
+  color: white;
+  margin-top: -4rem;
+
+  .grid-container {
+    $gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include x-large {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: #{$gap} #{$gap};
+      grid-template-areas:
+        "a b c";
+    }
+
+    .a { grid-area: a; }
+    .b { grid-area: b; }
+    .c { grid-area: c; }
+
+    .tile {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
