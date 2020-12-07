@@ -41,7 +41,6 @@
     left: 0;
     right: 0;
     background: rgba(black, 0.95);
-    transition: opacity 0.3s cubic-bezier(0.77,0,0.175,1);
 
     @include large {
       padding: 0 1.5rem;
@@ -61,6 +60,7 @@
     &.mobile-open {
       opacity: 1;
       pointer-events: auto;
+      transition: opacity 0.3s cubic-bezier(0.77,0,0.175,1);
     }
 
     .mobile-close-button {
