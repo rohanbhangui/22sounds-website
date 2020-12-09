@@ -91,102 +91,39 @@
         <div class="glide">
           <div data-glide-el="track" class="glide__track">
             <ul class="glide__slides">
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/21/09/6f21093c-8e44-95fc-718f-3778bcadbe3a/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">Where Do We Go - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/7Lsnyse35C75WrOMrCz7Wo">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/where-do-we-go-single/1538403934">
-                      <i class="fab fa-apple"></i>
-                    </a>
+              <% for(var item of featured_discography) { %>
+                <li class="glide__slide">
+                  <div class="tile">
+                    <img src="<%= item.img %>" />
+                    <div class="title"><%= item.title %></div>
+                    <div class="consume">
+                      <% if(item.url.spotify) { %>
+                        <a href="<%= item.url.spotify %>">
+                          <i class="fab fa-spotify"></i>
+                        </a>
+                      <% } %>
+                      <% if(item.url.apple) { %>
+                        <a href="<%= item.url.apple %>">
+                          <i class="fab fa-apple"></i>
+                        </a>
+                      <% } %>
+                      <% if(item.url.soundcloud) { %>
+                        <a href="<%= item.url.soundcloud %>">
+                          <i class="fab fa-soundcloud"></i>
+                        </a>
+                      <% } %>
+                    </div>
+                    <p class="h6">Released: <%= item.release_date %></p>
                   </div>
-                  <p class="h6">Released: November 25, 2020</p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9b/85/10/9b851068-3ce5-9649-26b3-3fb79ec4df96/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">Lockdown - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/0msItxyeb0ZwwUlKesph9Q">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/lockdown-single/1506254250">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  </div>
-                  <p class="h6">Released: April 17, 2020</p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/05/6b/22/056b22a9-b457-7c9c-eff7-8367e0b640d0/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">Starburst - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/4Ni6wmKoMyDDqzNFWX4ThK">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/starburst-single/1531804595">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  </div>
-                  <p class="h6">Released: October 9, 2020</p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/e8/9e/3a/e89e3a59-a92c-2d49-bae8-fb2592da483e/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">No Peace - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/6aDLCT8ycHE3CMOuS5NWfU">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/no-peace-single/1459218818">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  </div>
-                  <p class="h6">Released: April 19, 2019</p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/ad/53/3a/ad533ae1-63f2-33c1-cab1-f97662b89ea2/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">Two Gold - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/6Hoa5sH0U8S96dWWftlBqA">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/two-gold-single/1469320785">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  </div>
-                  <p class="h6">Released: July 5, 2019</p>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="tile">
-                  <img src="https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/d7/d1/3a/d7d13ace-1f08-8729-b221-eae063b7940b/artwork.jpg/1000x1000bb.webp" alt="">
-                  <div class="title">Hitting the Moon - Single</div>
-                  <div class="consume">
-                    <a href="https://open.spotify.com/album/0EKnF9LLiyTteiOid9wqPX">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                    <a href="https://music.apple.com/us/album/hitting-the-moon-single/1498465142">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  </div>
-                  <p class="h6">Released: February 28, 2020</p>
-                </div>
-              </li>
+                </li> 
+              <% } %>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <div class="container" id="container-4">
+      <!-- <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/where-do-we-go-single/1538403934"></iframe> -->
       <div class="restrict-container lg">
         <div class="grid-container">
           <div class="a tile big">

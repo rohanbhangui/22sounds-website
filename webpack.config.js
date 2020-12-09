@@ -1,5 +1,8 @@
 const path = require("path");
 
+const { featured, full } = require("./src/pages/discography/discography.js");
+
+
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //installed via npm
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -36,7 +39,12 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]  //Preset used for env setup
+          }
+        }]
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -76,11 +84,22 @@ module.exports = {
       inject: 'body',
       template: './src/index.html',
       filename: 'index.html',
+      templateParameters: {
+        'featured_discography': featured
+      }
     }),
     new HtmlWebpackPlugin({
       inject: 'body',
       template: './src/pages/about/index.html',
       filename: './about/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/discography/index.html',
+      filename: './discography/index.html',
+      templateParameters: {
+        'full_discography': full
+      }
     }),
     new MiniCssExtractPlugin({
       filename: "assets/styles/index.css",

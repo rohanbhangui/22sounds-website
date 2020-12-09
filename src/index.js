@@ -1,12 +1,10 @@
 'use strict';
 
-require('./assets/scss/index.scss');
-
-// const rolly = require("rolly.js");
+import './assets/scss/index.scss';
 
 import Glide from '@glidejs/glide';
-require('../node_modules/@glidejs/glide/dist/css/glide.core.min.css');
-require('../node_modules/@glidejs/glide/dist/css/glide.theme.min.css');
+import '../node_modules/@glidejs/glide/dist/css/glide.core.min.css';
+import '../node_modules/@glidejs/glide/dist/css/glide.theme.min.css';
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -51,13 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("header.header").classList.add("show");
       }
     });
-
-    // const r = rolly({
-    //   view: document.querySelector('.container-wrapper'),
-    //   native: true,
-    //   // other options
-    // });
-    // r.init();
 
     new Glide('#container-3 .glide', {
       type: 'slider',

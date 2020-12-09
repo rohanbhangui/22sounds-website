@@ -1,0 +1,69 @@
+body.discography {
+  background: black;
+  color: white;
+
+  main {
+    min-height: 100vh;
+
+    h1.h2 {
+      margin-top: 8rem;
+      margin-bottom: 4rem;
+      margin-left: -4%;
+    }
+  
+    .grid-container {
+      padding: 0 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        ".";
+      gap: 0.8rem 0.8rem;
+  
+      @include medium {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          ". .";
+      }
+  
+      @include large {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          ". . .";
+      }
+  
+      @include x-large {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        ". . . .";
+      }
+  
+      .tile {
+        .img-container {
+          position: relative;
+          padding-top: 100%;
+          width: 100%;
+          height: 100%;
+  
+          img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: auto;
+          }
+        }
+  
+        .consume {
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+  
+        .title {
+          color: white;
+        }
+      }
+    } 
+  }
+}

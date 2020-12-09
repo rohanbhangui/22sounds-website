@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!../../assets/partials/head.html') %>
+  <title>22Sounds</title>
+</head>
+<body class="discography">
+  <%= require('html-loader!../../assets/partials/header.html') %>
+  <main>
+    <div class="restrict-container lg">
+      <h1 class="h2">Discography</h1>
+      <div class="grid-container">
+        <% for(var item of full_discography) { %>
+          <div class="tile">
+            <div class="tile">
+              <div class="img-container">
+                <img src="<%= item.img %>" />
+              </div>
+              <div class="title"><%= item.title %></div>
+              <div class="consume">
+                <% if(item.url.spotify) { %>
+                  <a href="<%= item.url.spotify %>">
+                    <i class="fab fa-spotify"></i>
+                  </a>
+                <% } %>
+                <% if(item.url.apple) { %>
+                  <a href="<%= item.url.apple %>">
+                    <i class="fab fa-apple"></i>
+                  </a>
+                <% } %>
+                <% if(item.url.soundcloud) { %>
+                  <a href="<%= item.url.soundcloud %>">
+                    <i class="fab fa-soundcloud"></i>
+                  </a>
+                <% } %>
+              </div>
+              <p class="h6">Released: <%= item.release_date %></p>
+            </div>
+          </div> 
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <%= require('html-loader!../../assets/partials/footer.html') %>
+</body>
+</html>
