@@ -23,6 +23,7 @@ $medium: 640px;
 $large: 768px;
 $x-large: 1024px;
 $xx-large: 1200px;
+$xxx-large: 1600px;
 
 @mixin x-small {
   @media (min-width: #{$x-small}) {
@@ -56,6 +57,12 @@ $xx-large: 1200px;
 
 @mixin xx-large {
   @media (min-width: #{$xx-large}) {
+    @content;
+  }
+}
+
+@mixin xxx-large {
+  @media (min-width: #{$xxx-large}) {
     @content;
   }
 }
