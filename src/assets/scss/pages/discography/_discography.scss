@@ -122,7 +122,7 @@ body.discography {
         }
 
 
-        &:hover {
+        &:hover, &:focus {
           .cover {
             z-index: 1;   
             pointer-events: auto;
