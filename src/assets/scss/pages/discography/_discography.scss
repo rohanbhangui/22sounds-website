@@ -9,6 +9,11 @@ body.discography {
       margin-top: 8rem;
       margin-bottom: 4rem;
       margin-left: -4%;
+      text-align: center;
+
+      @include medium {
+        text-align: left;
+      }
     }
   
     .grid-container {
