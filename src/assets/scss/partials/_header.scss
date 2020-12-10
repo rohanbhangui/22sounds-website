@@ -111,7 +111,7 @@
               font-size: 1.2rem;
             }
   
-            &:hover {
+            &:hover, &:focus {
               background-size: 4px 30%;
               color: rgba(255, 255, 255, 1);
   

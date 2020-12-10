@@ -10,13 +10,15 @@ body.discography {
     }
 
     h1.h2 {
-      margin-top: 8rem;
-      margin-bottom: 4rem;
+      margin-top: 6rem;
+      margin-bottom: 3rem;
       margin-left: 0%;
       text-align: center;
 
       @include medium {
         text-align: left;
+        margin-top: 8rem;
+       margin-bottom: 4rem;
       }
     }
   
