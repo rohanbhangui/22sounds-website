@@ -67,15 +67,15 @@
 
 
 .h1, h1 {
-	$base-size: 50px;
-	$base-letter-spacing: -2px;
+	$base-size: 3.125rem;
+	$base-letter-spacing: -0.125rem;
 
 	font-size: $base-size;
 	letter-spacing: $base-letter-spacing;
   margin: 0;
 	@include bold-ext;
 	
-	@include small {
+	@include medium {
 		font-size: $base-size*1.429;
 		letter-spacing: $base-letter-spacing*1.429;
 	}
@@ -87,15 +87,15 @@
 }
 
 .h2, h2 {
-	$base-size: 42px;
-	$base-letter-spacing: -2px;
+	$base-size: 2.625rem;
+	$base-letter-spacing: -0.125rem;
 
 	font-size: $base-size;
 	letter-spacing: $base-letter-spacing;
 	font-weight: 500;
   @include bold-ext;
 
-	@include small {
+	@include medium {
 		font-size: $base-size*1.429;
 		letter-spacing: $base-letter-spacing*1.429;
 	}
@@ -107,8 +107,8 @@
 }
 
 .h3, h3 {
-	$base-size: 35px;
-	$base-letter-spacing: -0.66px;
+	$base-size: 2.1875rem;
+	$base-letter-spacing: -0.04125rem;
 
 	font-size: $base-size;
 	letter-spacing: $base-letter-spacing;
@@ -119,9 +119,9 @@
 	background: linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
 	background-position: 0 100%;
 	background-repeat: repeat-x;
-	background-size: 4px 25%;
+	background-size: 0.25rem 25%;
 
-	@include small {
+	@include medium {
 		font-size: $base-size*1.429;
 		letter-spacing: $base-letter-spacing*1.429;
 	}
@@ -133,15 +133,15 @@
 }
 
 .h4, h4 {
-	$base-size: 21px;
-	$base-letter-spacing: -0.33px;
+	$base-size: 1.3125rem;
+	$base-letter-spacing: -0.030625rem;
 
 	font-size: $base-size;
 	letter-spacing: $base-letter-spacing;
   font-weight: 400;
   @include bold-ext;
 
-	@include small {
+	@include medium {
 		font-size: $base-size*1.429;
 		letter-spacing: $base-letter-spacing*1.429;
 	}
@@ -153,8 +153,8 @@
 }
 
 .h5, h5 {
-	font-size: 18px;
-	letter-spacing: -0.33px;
+	font-size: 1.125rem;
+	letter-spacing: -0.030625rem;
   font-weight: 400;
   @include bold-ext;
 
