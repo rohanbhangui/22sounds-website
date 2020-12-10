@@ -113,6 +113,7 @@
 	font-size: $base-size;
 	letter-spacing: $base-letter-spacing;
 	font-weight: 600;
+	padding: 0 0.1rem;
 	@include bold-ext;
 
 	background: linear-gradient(90deg, $color-primary 0%, $color-primary 100%);

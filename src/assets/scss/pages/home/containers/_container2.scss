@@ -47,10 +47,10 @@
       
       .b {
         grid-area: b;
-        padding-left: 0.5rem;
+        padding-left: 1rem;
   
         @include small {
-          padding-left: 1rem;
+          padding-left: 2rem;
         }
   
         @include x-large {

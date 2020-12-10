@@ -4,11 +4,15 @@ body.discography {
 
   main {
     min-height: 100vh;
+    
+    .restrict-container {
+      padding: 0 0.8rem;
+    }
 
     h1.h2 {
       margin-top: 8rem;
       margin-bottom: 4rem;
-      margin-left: -4%;
+      margin-left: 0%;
       text-align: center;
 
       @include medium {
@@ -17,8 +21,7 @@ body.discography {
     }
   
     .grid-container {
-      overflow-x: hidden;
-      padding: 0 0.8rem;
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: 1fr;
@@ -41,11 +44,11 @@ body.discography {
       @include x-large {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
-        ". . . .";
+        ". . .";
       }
   
       .tile {
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         position: relative;
 
         .img-container {
@@ -128,6 +131,7 @@ body.discography {
 
 
         &:hover, &:focus {
+          border: 1px solid rgba(255, 255, 255, 0);
           .cover {
             z-index: 1;   
             pointer-events: auto;
