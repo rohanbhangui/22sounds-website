@@ -1,6 +1,6 @@
 #container-5 {
   color: white;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(lighten($color-primary, 0.8), 0.05);
   margin: 8rem auto 8rem;
 
   .restrict-container {
