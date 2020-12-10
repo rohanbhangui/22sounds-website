@@ -9,42 +9,42 @@
   <main>
     <div class="restrict-container lg">
       <h1 class="h2">Discography</h1>
-
-      <!-- <h1>heading 1</h1>
-      <h2>heading 2</h2>
-      <h3>heading 3</h3>
-      <h4>heading 4</h4>
-      <h5>heading 5</h5> -->
       <div class="grid-container">
         <% for(var item of full_discography) { %>
-          <div class="tile">
-            <div class="img-container">
-              <img src="<%= item.img %>" />
-            </div>
-            <div class="cover">
-              <div class="inner">
-                <div class="title"><%= item.title %></div>
-                <p class="h6">Released: <%= item.release_date %></p>
-                <div class="consume">
-                  <% if(item.url.spotify) { %>
-                    <a href="<%= item.url.spotify %>">
-                      <i class="fab fa-spotify"></i>
-                    </a>
-                  <% } %>
-                  <% if(item.url.apple) { %>
-                    <a href="<%= item.url.apple %>">
-                      <i class="fab fa-apple"></i>
-                    </a>
-                  <% } %>
-                  <% if(item.url.soundcloud) { %>
-                    <a href="<%= item.url.soundcloud %>">
-                      <i class="fab fa-soundcloud"></i>
-                    </a>
-                  <% } %>
+          <% if(true) { %>
+            <div class="tile square">
+              <div class="img-container">
+                <img src="<%= item.img %>" />
+              </div>
+              <div class="cover">
+                <div class="inner">
+                  <div class="title"><%= item.title %></div>
+                  <p class="h6">Released: <%= item.release_date %></p>
+                  <div class="consume">
+                    <% if(item.url.spotify) { %>
+                      <a href="<%= item.url.spotify %>" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-spotify"></i>
+                      </a>
+                    <% } %>
+                    <% if(item.url.apple) { %>
+                      <a href="<%= item.url.apple %>" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-apple"></i>
+                      </a>
+                    <% } %>
+                    <% if(item.url.soundcloud) { %>
+                      <a href="<%= item.url.soundcloud %>" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-soundcloud"></i>
+                      </a>
+                    <% } %>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          <% } else { %>
+            <div class="tile video">
+              <iframe src="<%= item.youtube_embed %>" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          <% } %>
         <% } %>
       </div>
     </div>
