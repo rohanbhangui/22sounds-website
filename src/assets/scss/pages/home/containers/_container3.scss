@@ -34,34 +34,7 @@
           font-weight: 500;
           font-size: 1.5rem;
           letter-spacing: -0.01rem;
-        }
-
-        .consume {
-          margin: 1rem 0;
-          a {
-            opacity: 0.5;
-            display: inline-block;
-            transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-            transform: translateY(0);
-            padding: 0 0.2rem;
-            margin: 0 0.1rem;
-      
-            i {
-              font-size: 1.5rem;
-              color: white;
-            }
-          }
-      
-          &:hover {
-            a {
-              opacity: 0.5;
-      
-              &:hover {
-                opacity: 1;
-                transform: translateY(-0.3rem);
-              }
-            }
-          }
+          margin-bottom: 0.5rem;
         }
       }
   

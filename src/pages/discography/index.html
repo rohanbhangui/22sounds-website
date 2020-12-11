@@ -21,21 +21,9 @@
                   <div class="title"><%= item.title %></div>
                   <p class="h6">Released: <%= item.release_date %></p>
                   <div class="consume">
-                    <% if(item.url.spotify) { %>
-                      <a href="<%= item.url.spotify %>" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-spotify"></i>
-                      </a>
-                    <% } %>
-                    <% if(item.url.apple) { %>
-                      <a href="<%= item.url.apple %>" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-apple"></i>
-                      </a>
-                    <% } %>
-                    <% if(item.url.soundcloud) { %>
-                      <a href="<%= item.url.soundcloud %>" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-soundcloud"></i>
-                      </a>
-                    <% } %>
+                    <a href="<%= item.url %>" class="button alt-primary" target="_blank" rel="noopener noreferrer">
+                      Listen
+                    </a>
                   </div>
                 </div>
               </div>
