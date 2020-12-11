@@ -1,6 +1,7 @@
 #container-3 {
   color: white;
   overflow: hidden;
+  padding-left: 1rem;
 
   h3 {
     display: inline-block;
@@ -8,46 +9,48 @@
     margin-left: 1rem;
   }
 
-  .glide__track {
-    overflow: visible;
-
-    .glide__slide {
-      .tile {
-        max-width: 30rem;
-        display: inline-block;
-        opacity: 0.33;
-        transition: opacity 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+  .glide {
+    .glide__track {
+      overflow: visible;
   
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          // transform: scale(0.8);
-          // opacity: 0.33;
-          // transform-origin: bottom left;
-          transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-        }
-
-        .title {
-          margin-top: 1rem;
-          font-family: $font-primary;
-          font-weight: 500;
-          font-size: 1.5rem;
-          letter-spacing: -0.01rem;
-          margin-bottom: 0.5rem;
-        }
-
-        a {
-          display: inline-block;
-        }
-      }
-  
-      &--active {
+      .glide__slide {
         .tile {
-          opacity: 1;
+          max-width: 30rem;
+          display: inline-block;
+          opacity: 0.33;
+          transition: opacity 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+    
           img {
-            // transform: scale(1);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // transform: scale(0.8);
+            // opacity: 0.33;
+            // transform-origin: bottom left;
+            transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          }
+  
+          .title {
+            margin-top: 1rem;
+            font-family: $font-primary;
+            font-weight: 500;
+            font-size: 1.5rem;
+            letter-spacing: -0.01rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          a {
+            display: inline-block;
+          }
+        }
+    
+        &--active {
+          .tile {
             opacity: 1;
+            img {
+              // transform: scale(1);
+              opacity: 1;
+            }
           }
         }
       }
