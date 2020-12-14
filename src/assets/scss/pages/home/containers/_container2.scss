@@ -4,9 +4,6 @@
   .restrict-container {
     margin: 4rem auto;
     
-    @include medium {
-      margin: 8rem auto;
-    }
 
     .grid-container {
       display: flex;

@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if(window.scrollY >= window.innerHeight/2) {
       document.querySelector("header.header").classList.add("show");
-      document.querySelector("#container-1 video").classList.add("show");
+      // document.querySelector("#container-1 video").classList.add("show");
     }
     else {
       setTimeout(() => {
         document.querySelector("header.header").classList.add("show");
-        document.querySelector("#container-1 video").classList.add("show");
+        // document.querySelector("#container-1 video").classList.add("show");
       }, LOADING_TIMER+2750);
     }
 
