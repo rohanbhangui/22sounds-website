@@ -12,21 +12,29 @@
       @include x-large {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 0.6fr;
+        grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
           "a a"
           "c b";
+
+        @include large {
+          grid-template-rows: 1fr 0.6fr;
+        }
       }
 
       .a {
         grid-area: a;
-        max-height: 40rem;
+        max-height: 25rem;
         width: 100%;
         overflow: hidden;
 
-        @include xxx-large {
-          max-height: 45rem;
+        @include small {
+          max-height: 30rem;
+        }
+
+        @include medium {
+          max-height: 40rem;
         }
   
         img {
