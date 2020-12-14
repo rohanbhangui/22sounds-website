@@ -94,12 +94,11 @@
               <% for(var item of featured_discography) { %>
                 <li class="glide__slide slide">
                   <div class="tile">
-                    <img src="<%= item.img %>" />
+                    <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer">
+                      <img src="<%= item.img %>" />
+                    </a>
                     <div class="title"><%= item.title %></div>
                     <p class="h6">Released: <%= item.release_date %></p>
-                    <div class="consume">
-                      <a href="<%= item.url %>" class="button primary" target="_blank" rel="noopener noreferrer">Listen</a>
-                    </div>
                   </div>
                 </li> 
               <% } %>
