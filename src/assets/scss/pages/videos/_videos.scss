@@ -4,6 +4,7 @@ body.video {
 
   main {
     min-height: 100vh;
+    overflow-x: hidden;
     
     .restrict-container {
       padding: 0 0 4rem;
