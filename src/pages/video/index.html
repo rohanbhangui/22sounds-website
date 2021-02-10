@@ -37,31 +37,27 @@
             </div>
           <% } %>
           <% if(index % 7 == 1) { %>
-            <div class="slider-container">
-              <div class="glide">
-                <div data-glide-el="track" class="glide__track">
-                  <ul class="glide__slides">
+            <div class="grid-container">
           <% } %>
           <% if(index % 7 != 0) { %>
-            <li class="glide__slide slide">
-              <div class="tile">
-                <div class="content-container">
-                  <img src="<%= item.img %>" alt="" />
-                  <div class="content-block">
-                    <div class="inner-content">
-                      <div class="title"><%= item.title %></div>
-                      <a href="<%= item.url %>" class="button primary">Watch</a>
-                    </div>
-                    <!-- <div class="play-button"></div> -->
+            <div class="tile <%= index != 0 && index % 7 == 2 || index % 7 == 5 ? 'middle' : '' %>">
+              <div class="content-container" onClick="(function(){
+                    if(window.matchMedia('(max-width: 768px)').matches) window.location = '<%= item.url %>';
+                    return false;
+                })();">
+                <img src="<%= item.img %>" alt="" />
+                <div class="content-block"                                                                                                                                                                                                                                                                                                 >
+                  <div class="inner-content">
+                    <div class="title"><%= item.title %></div>
+                    <h6>Released <%= item.release_date %></h6>
+                    <a href="<%= item.url %>" class="button primary">Watch</a>
                   </div>
+                  <a href="<%= item.url %>" class="play-button"></a>
                 </div>
               </div>
-            </li>
+            </div>
           <% } %>
           <% if(index % 7 == 6) { %>
-                  </ul>
-                </div>
-              </div>
             </div>
           <% } %>         
         <% } %>
