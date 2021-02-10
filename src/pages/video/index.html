@@ -13,47 +13,71 @@
         <% for(var [index, item] of full_videography.entries()) { %>
           <% if(index == 0) { %>
             <div class="featured">
-              <div class="play-button"></div>
               <img src="<%= item.img %>" alt="" />
               <div class="content-block">
                 <div class="badge button">New Release</div>
                 <h4 class="title"><%= item.title %></h4>
               </div>
             </div>
-          <% } else if(index % 4 == 0 && index % 8 !== 0) { %>
+          <% } else if(index % 7 == 0 && index % 14 !== 0) { %>
             <div class="wide-banner">
               <div class="flex-container">
                 <div class="flex-item img">
                   <img src="<%= item.img %>" alt="" />
                 </div>
                 <div class="flex-item content-block">
-                  <div class="badge button">Released <%= item.release_date %></div>
-                  <h4 class="title"><%= item.title %></h4>
+                  <div class="inner-content">
+                    <div class="badge button">Released <%= item.release_date %></div>
+                    <h4 class="title"><%= item.title %></h4>
+                    <a href="<%= item.url %>" class="button primary">Watch</a>
+                  </div>
                 </div>
               </div>
             </div>
-          <% } else if(index % 4 == 0 && index % 8 == 0) { %>
+          <% } else if(index % 7 == 0 && index % 14 == 0) { %>
             <div class="wide-banner">
               <div class="flex-container">
                 <div class="flex-item content-block">
-                  <div class="badge button">Released <%= item.release_date %></div>
-                  <h4 class="title"><%= item.title %></h4>
+                  <div class="inner-content">
+                    <div class="badge button">Released <%= item.release_date %></div>
+                    <h4 class="title"><%= item.title %></h4>
+                    <a href="<%= item.url %>" class="button primary">Watch</a>
+                  </div>
                 </div>
                 <div class="flex-item img">
                   <img src="<%= item.img %>" alt="" />
-                </div>
-              </div>
-            </div>
-          <% } else { %>
-            <div class="tile">
-              <img src="<%= item.img %>" alt="" />
-              <div class="content-block">
-                <div class="inner-content">
-                  <div class="title"><%= item.title %></div>
                 </div>
               </div>
             </div>
           <% } %>
+          <% if(index % 7 == 1) { %>
+            <div class="slider-container">
+              <div class="glide">
+                <div data-glide-el="track" class="glide__track">
+                  <ul class="glide__slides">
+          <% } %>
+          <% if(index % 7 != 0) { %>
+            <li class="glide__slide slide">
+              <div class="tile">
+                <div class="content-container">
+                  <img src="<%= item.img %>" alt="" />
+                  <div class="content-block">
+                    <div class="inner-content">
+                      <div class="title"><%= item.title %></div>
+                      <a href="<%= item.url %>" class="button primary">Watch</a>
+                    </div>
+                    <!-- <div class="play-button"></div> -->
+                  </div>
+                </div>
+              </div>
+            </li>
+          <% } %>
+          <% if(index % 7 == 6) { %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <% } %>         
         <% } %>
       </div>
     </div>

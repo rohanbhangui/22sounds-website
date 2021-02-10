@@ -78,5 +78,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }).mount()
   } else if (document.querySelector("body").classList.contains("about")) {
     document.querySelector("header.header").classList.add("active");
+  } else if (document.querySelector("body").classList.contains("video")) {
+    const sliders = document.querySelectorAll('.slider-container .glide');
+    const config =  {
+      type: 'slider',
+      perView: 3.5,
+      gap: 20,
+      rewind: false,
+      breakpoints: {
+        1440: {
+          perView: 3.5,
+        },
+        1200: {
+          perView: 3.5,
+        },
+        960: {
+          perView: 2.5,
+        },
+        800: {
+          perView: 1.5
+        },
+        600: {
+          perView: 1.5
+        },
+        400: {
+          perView: 1.2
+        }
+      }
+    }
+
+    sliders.forEach(item => {
+      new Glide(item, config).mount()
+    });
   }
 });
