@@ -66,6 +66,10 @@ body.contact {
                 text-align: center;
                 display: block;
 
+                > * {
+                  vertical-align: middle;
+                }
+
                 span {
                   display: inline-block;
                   margin-left: 0.5rem;
