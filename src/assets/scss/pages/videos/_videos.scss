@@ -42,11 +42,16 @@ body.video {
         .content-block {
           background: $color-primary;
           max-width: 40rem;
-          width: calc(100% - 2rem);
+          width: calc(100% - 1rem);
           margin: 0 auto;
           top: -2rem;
-          padding: 2rem;
+          padding: 2rem 1rem;
           position: relative;
+
+          @include medium {
+            padding: 2rem;
+            width: calc(100% - 2rem);
+          }
           
           @include large {
             top: -4rem;
@@ -55,27 +60,8 @@ body.video {
             width: 100%;
           }
 
-          // h4.title {
-          //   $base-size: 1.7125rem;
-          //   $base-letter-spacing: -0.030625rem;
-
-          //   font-size: $base-size;
-          //   letter-spacing: $base-letter-spacing;
-
-          //   @include medium {
-          //     font-size: $base-size*1.429;
-          //     letter-spacing: $base-letter-spacing*1.429;
-          //   }
-          
-          //   @include x-large {
-          //     font-size: $base-size*1.429*1.561;
-          //     letter-spacing: $base-letter-spacing*1.429*1.561;
-          //   }
-          // }
-
           .title {
             background: none;
-            word-break: break-all;
           }
 
           .badge {
@@ -150,14 +136,10 @@ body.video {
               bottom:0;
               top: 0;
               right: 0;
-              background: rgba(0, 0, 0, 0.5);
+              background: rgba(0, 0, 0, 0.66);
 
               @include large {
                 background: rgba(0, 0, 0, 1);
-              }
-
-
-              @include medium {
                 flex: 0 0 34%;
                 position: static;
               }
