@@ -55,6 +55,29 @@ body.video {
             width: 100%;
           }
 
+          // h4.title {
+          //   $base-size: 1.7125rem;
+          //   $base-letter-spacing: -0.030625rem;
+
+          //   font-size: $base-size;
+          //   letter-spacing: $base-letter-spacing;
+
+          //   @include medium {
+          //     font-size: $base-size*1.429;
+          //     letter-spacing: $base-letter-spacing*1.429;
+          //   }
+          
+          //   @include x-large {
+          //     font-size: $base-size*1.429*1.561;
+          //     letter-spacing: $base-letter-spacing*1.429*1.561;
+          //   }
+          // }
+
+          .title {
+            background: none;
+            word-break: break-all;
+          }
+
           .badge {
             margin-bottom: 0.5rem;
             // background: black;
