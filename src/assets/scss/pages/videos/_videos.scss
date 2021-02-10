@@ -48,31 +48,26 @@ body.video {
           padding: 2rem;
           position: relative;
           
-          @include medium {
+          @include large {
             top: -4rem;
             left: 2rem;
             margin: 0;
             width: 100%;
           }
 
-          .button.badge {
-            display: inline-block;
-            color: black;
-            font-weight: 500;
-            border: 2px solid black;
+          .badge {
             margin-bottom: 0.5rem;
-
-            &:active {
-              position: static;
-              top: auto;
-            }
+            // background: black;
+            // color: $color-primary;
+            color: black;
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
           }
 
-          .button.alt-primary {
+          .button {
             margin-top: 2rem;
             display: inline-block;
             margin-bottom: 0rem;
-            
           }
         }
       }
@@ -134,11 +129,11 @@ body.video {
               background: rgba(0, 0, 0, 0.5);
 
               @include large {
-                background: rgba(0, 0, 0, 0);
+                background: rgba(0, 0, 0, 1);
               }
 
 
-              @include large {
+              @include medium {
                 flex: 0 0 34%;
                 position: static;
               }
@@ -147,34 +142,27 @@ body.video {
                 margin: 1rem 1.5rem;
                 position: absolute;
                 bottom: 1rem;
-                left: 1rem;
 
                 @include large {
-                  position: static;
                   left: auto;
                   bottom: auto;
-                  margin: 3rem 1.5rem;
+                  position: relative;
+                  margin: 0 0.5rem;
+                  top: 50%;
+                  transform: translateY(-50%);
                 }
 
-                .button.badge {
-                  display: inline-block;
-                  color: white;
-                  font-weight: 500;
-                  border: 2px solid white;
-                  margin-bottom: 1rem;
-                  margin-top: 0;
-
-                  @include large {
-                    margin-top: 2rem;
-                  }
-      
-                  &:active {
-                    position: static;
-                    top: auto;
-                  }
+                @include x-large {
+                  margin: 0 1.5rem;
                 }
 
-                .button.primary {
+                h6 {
+                  margin-bottom: 0.5rem;
+                  font-size: 0.9rem;
+                  color: darken(#fff, 40%);
+                }
+
+                .button {
                   display: inline-block;
                   margin-top: 1rem;
 

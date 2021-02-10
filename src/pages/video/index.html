@@ -15,9 +15,9 @@
             <div class="featured">
               <img src="<%= item.img %>" alt="" />
               <div class="content-block">
-                <div class="badge button">New Release</div>
+                <h6 class="badge">New Release</h6>
                 <h4 class="title"><%= item.title %></h4>
-                <a href="<%= item.url %>" class="button alt-primary">Watch</a>
+                <a href="<%= item.url %>" class="button alt-secondary">Watch</a>
               </div>
             </div>
           <% } else if(index % 7 == 0) { %>
@@ -28,9 +28,9 @@
                 </div>
                 <div class="flex-item content-block">
                   <div class="inner-content">
-                    <div class="badge button">Released <%= item.release_date %></div>
+                    <h6>Released <%= item.release_date %></h6>
                     <h4 class="title"><%= item.title %></h4>
-                    <a href="<%= item.url %>" class="button primary">Watch</a>
+                    <a href="<%= item.url %>" class="button secondary">Watch</a>
                   </div>
                 </div>
               </div>

@@ -33,7 +33,25 @@
 	&.secondary {
 		border: 2px solid $color-primary;
 		color: $color-primary;
-		background: none;
+		
+
+		background: rgba(0, 0, 0, 0) linear-gradient(to bottom, $color-primary 99%, rgba(0, 0, 0, 0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0) linear-gradient(90deg, $color-primary 99%, rgba(0, 0, 0, 0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: black;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
 	}
 
 	&.alt-primary {
@@ -51,13 +69,49 @@
 	&.alt-secondary {
 		border: 2px solid #fff;
 		color: white;
-		background: none;
 
-		// &:hover {
-		// 	background: #fff;
-		// 	color: $color-primary;
-		// }
+		background: rgba(0, 0, 0, 0) linear-gradient(to bottom, white 99%, rgba(0, 0, 0, 0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: white;
+		border: 2px solid white;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0) linear-gradient(90deg, white 99%, rgba(0, 0, 0, 0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
 	}
+
+	&.alt-tertiary {
+		background: rgba(0,0,0,0) linear-gradient(to bottom, black 99%, rgba(0,0,0,0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: black;
+		border: 2px solid black;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0,0,0,0) linear-gradient(90deg, black 99%, rgba(0,0,0,0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
+	} 
 
 	&:active {
 		position: relative;
