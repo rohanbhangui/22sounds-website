@@ -1,0 +1,80 @@
+body.contact {
+  color: white;
+
+  main {
+    min-height: 100vh;
+    
+    .restrict-container {
+      padding: 0 0.8rem 4rem;
+    }
+
+    h1.h2 {
+      margin-top: 6rem;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      @include medium {
+        text-align: left;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+      }
+    }
+    
+    @import "../home/containers/container2";
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .flex-item {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include medium {
+          flex: 0 0 50%;
+        }
+
+        h3 {
+          display: inline;
+        }
+
+        &.flex-left {
+          .content {
+            display: block;
+            margin-top: 2rem;
+
+            a {
+              color: white;
+
+              @include medium {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
+        &.flex-right {
+          .social {
+            margin-top: 1rem;
+
+            .links-container {
+              a {
+                text-decoration: none;
+                color: white;
+                margin: 1rem 0;
+                text-align: center;
+                display: block;
+
+                span {
+                  display: inline-block;
+                  margin-left: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

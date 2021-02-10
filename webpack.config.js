@@ -91,8 +91,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: './src/pages/about/index.html',
-      filename: './about/index.html',
+      template: './src/pages/contact/index.html',
+      filename: './contact/index.html',
     }),
     new HtmlWebpackPlugin({
       inject: 'body',
