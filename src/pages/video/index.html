@@ -17,10 +17,11 @@
               <div class="content-block">
                 <div class="badge button">New Release</div>
                 <h4 class="title"><%= item.title %></h4>
+                <a href="<%= item.url %>" class="button alt-primary">Watch</a>
               </div>
             </div>
-          <% } else if(index % 7 == 0 && index % 14 !== 0) { %>
-            <div class="wide-banner">
+          <% } else if(index % 7 == 0) { %>
+            <div class="wide-banner <%= index % 14 == 0 ? 'invert' : '' %>">
               <div class="flex-container">
                 <div class="flex-item img">
                   <img src="<%= item.img %>" alt="" />
@@ -31,21 +32,6 @@
                     <h4 class="title"><%= item.title %></h4>
                     <a href="<%= item.url %>" class="button primary">Watch</a>
                   </div>
-                </div>
-              </div>
-            </div>
-          <% } else if(index % 7 == 0 && index % 14 == 0) { %>
-            <div class="wide-banner">
-              <div class="flex-container">
-                <div class="flex-item content-block">
-                  <div class="inner-content">
-                    <div class="badge button">Released <%= item.release_date %></div>
-                    <h4 class="title"><%= item.title %></h4>
-                    <a href="<%= item.url %>" class="button primary">Watch</a>
-                  </div>
-                </div>
-                <div class="flex-item img">
-                  <img src="<%= item.img %>" alt="" />
                 </div>
               </div>
             </div>

@@ -82,15 +82,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const sliders = document.querySelectorAll('.slider-container .glide');
     const config =  {
       type: 'slider',
-      perView: 3.5,
+      perView: 2.5,
       gap: 20,
       rewind: false,
       breakpoints: {
         1440: {
-          perView: 3.5,
+          perView: 2.5,
         },
         1200: {
-          perView: 3.5,
+          perView: 2.5,
         },
         960: {
           perView: 2.5,

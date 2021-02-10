@@ -55,25 +55,54 @@ body.video {
             width: 100%;
           }
 
-          .button {
+          .button.badge {
             display: inline-block;
             color: black;
             font-weight: 500;
             border: 2px solid black;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
 
             &:active {
               position: static;
               top: auto;
             }
           }
+
+          .button.alt-primary {
+            margin-top: 2rem;
+            display: inline-block;
+            margin-bottom: 0rem;
+            
+          }
         }
       }
 
-      .wide-banner  {
+      .wide-banner {
         display: block;
         margin: 3rem 0;
         padding: 0 0.8rem;
+
+        &.invert {
+          .flex-container {
+            .flex-item {
+              &.img {
+                order: 1;
+
+                @include medium {
+                  order: 2;
+                }
+              }
+
+              &.content-block {
+                order: 2;
+
+                @include medium {
+                  order: 1;
+                }
+              }
+            }
+          }
+        }
 
         .flex-container {
           display: flex;
@@ -145,7 +174,6 @@ body.video {
             overflow: visible;
         
             .glide__slide {
-              width: 40rem;
               .tile {
                 
                 position: relative;
