@@ -248,6 +248,12 @@ p {
 	}
 }
 
+a {
+ & , &:visited {
+	 color: white;
+ }	
+}
+
 //Section style
 
 .inverted {
