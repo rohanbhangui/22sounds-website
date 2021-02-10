@@ -1,6 +1,7 @@
 const path = require("path");
 
-const { featured, full } = require("./src/pages/discography/discography.js");
+const { featured_music, full_music } = require("./src/pages/music/discography.js");
+const { featured_video, full_videos } = require("./src/pages/video/videography.js");
 
 
 const CopyPlugin = require("copy-webpack-plugin");
@@ -85,7 +86,7 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       templateParameters: {
-        'featured_discography': featured
+        'featured_discography': featured_music
       }
     }),
     new HtmlWebpackPlugin({
@@ -95,10 +96,18 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       inject: 'body',
-      template: './src/pages/discography/index.html',
-      filename: './discography/index.html',
+      template: './src/pages/music/index.html',
+      filename: './music/index.html',
       templateParameters: {
-        'full_discography': full
+        'full_discography': full_music
+      }
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/video/index.html',
+      filename: './video/index.html',
+      templateParameters: {
+        'full_videography': full_videos
       }
     }),
     new MiniCssExtractPlugin({

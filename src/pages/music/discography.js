@@ -44,7 +44,7 @@ const full = [
 ]
 
 
-exports.featured = [
+exports.featured_music = [
   full[0],
   full[1],
   full[2],
@@ -53,4 +53,4 @@ exports.featured = [
   full[5]
 ];
 
-exports.full = full
+exports.full_music = full

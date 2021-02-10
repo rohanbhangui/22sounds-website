@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!../../assets/partials/head.html') %>
+  <title>22Sounds</title>
+</head>
+<body class="video">
+  <%= require('html-loader!../../assets/partials/header.html') %>
+  <main>
+    <div class="restrict-container lg">
+      <h1 class="h2">Video</h1>
+      <div class="videos-container">
+        <% for(var [index, item] of full_videography.entries()) { %>
+          <% if(index == 0) { %>
+            <div class="featured">
+              <div class="play-button"></div>
+              <img src="<%= item.img %>" alt="" />
+              <div class="content-block">
+                <div class="badge button">New Release</div>
+                <h4 class="title"><%= item.title %></h4>
+              </div>
+            </div>
+          <% } else if(index % 4 == 0 && index % 8 !== 0) { %>
+            <div class="wide-banner">
+              <div class="flex-container">
+                <div class="flex-item img">
+                  <img src="<%= item.img %>" alt="" />
+                </div>
+                <div class="flex-item content-block">
+                  <div class="badge button">Released <%= item.release_date %></div>
+                  <h4 class="title"><%= item.title %></h4>
+                </div>
+              </div>
+            </div>
+          <% } else if(index % 4 == 0 && index % 8 == 0) { %>
+            <div class="wide-banner">
+              <div class="flex-container">
+                <div class="flex-item content-block">
+                  <div class="badge button">Released <%= item.release_date %></div>
+                  <h4 class="title"><%= item.title %></h4>
+                </div>
+                <div class="flex-item img">
+                  <img src="<%= item.img %>" alt="" />
+                </div>
+              </div>
+            </div>
+          <% } else { %>
+            <div class="tile">
+              <img src="<%= item.img %>" alt="" />
+              <div class="content-block">
+                <div class="inner-content">
+                  <div class="title"><%= item.title %></div>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <%= require('html-loader!../../assets/partials/footer.html') %>
+</body>
+</html>
