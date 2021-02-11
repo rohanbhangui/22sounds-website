@@ -2,6 +2,11 @@
   color: white;
   overflow: hidden;
   padding-left: 1rem;
+  margin-bottom: 4rem;
+
+  @include large {
+    margin-bottom: 8rem;
+  }
 
   h3 {
     display: inline-block;
