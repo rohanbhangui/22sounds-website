@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", (e) => {
-      console.log("DEBUG", window.innerHeight, document.querySelector("header.header").offsetHeight)
       document.querySelector("#container-1").style.height = `${window.innerHeight - document.querySelector("header.header").offsetHeight}px`
     });
 
