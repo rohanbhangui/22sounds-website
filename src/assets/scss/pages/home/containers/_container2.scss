@@ -63,34 +63,38 @@
         }
   
         ul {
-          
-          display: inline-block;
-          margin-top: 1rem;
-          margin-bottom: 2rem;
-
-          @include medium {
-            margin-bottom: 3rem;
-          }
-
-          @include large {
-            margin-top: 0;
-            margin-bottom: 0;
-            transform: translateY(-50%) translateX(-50%);
-            position: relative;
-            top: 40%;
-            left: 50%;
-          }
+          transform: translateY(-15%);
   
           li {
             list-style: none;
   
-            &.h1 { 
+            &.h1, &.h2 {
               &.em {
                 color: $color-primary;
               }
             }
           }
+
+          &.artist {
+            display: inline-block;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+
+            @include medium {
+              margin-bottom: 3rem;
+            }
+
+            @include large {
+              margin-top: 0;
+              margin-bottom: 0;
+              transform: translateY(-50%) translateX(-50%);
+              position: relative;
+              top: 40%;
+              left: 50%;
+            }
+          }
         }
+        
       }
       
       .c { 
