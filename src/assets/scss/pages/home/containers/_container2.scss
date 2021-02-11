@@ -77,14 +77,10 @@
 
           &.artist {
             display: inline-block;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
 
-            @include medium {
-              margin-bottom: 3rem;
-            }
-
-            @include large {
+            @include x-large {
               margin-top: 0;
               margin-bottom: 0;
               transform: translateY(-50%) translateX(-50%);
