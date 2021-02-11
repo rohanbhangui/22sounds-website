@@ -14,11 +14,32 @@ const full = [
     url: "https://smarturl.it/lrk3oz"
   },
   {
+    title: "Lockdown - Single",
+    img: "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9b/85/10/9b851068-3ce5-9649-26b3-3fb79ec4df96/artwork.jpg/1000x1000bb.webp",
+    release_date: "April 17, 2020",
+    youtube_embed: "",
+    url: "https://smarturl.it/zc3tqc"
+  },
+  {
+    title: "Big Mood",
+    img: "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/f9/2d/d0/f92dd01d-80ef-5124-72c3-754297529c15/artwork.jpg/1000x1000bb.webp",
+    release_date: "March 25, 2020",
+    youtube_embed: "",
+    url: "https://smarturl.it/mlnc39"
+  },
+  {
     title: "Hitting the Moon - Single",
     img: "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/d7/d1/3a/d7d13ace-1f08-8729-b221-eae063b7940b/artwork.jpg/1000x1000bb.webp",
     release_date: "February 28, 2020",
     youtube_embed: "",
     url: "https://smarturl.it/lzuadr"
+  },
+  {
+    title: "Two Gold - Single",
+    img: "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/ad/53/3a/ad533ae1-63f2-33c1-cab1-f97662b89ea2/artwork.jpg/1000x1000bb.webp",
+    release_date: "July 5, 2019",
+    youtube_embed: "",
+    url: "https://smarturl.it/19df9i"
   },
   {
     title: "No Peace - Single",
@@ -28,18 +49,11 @@ const full = [
     url: "https://smarturl.it/f0c378"
   },
   {
-    title: "Lockdown - Single",
-    img: "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/9b/85/10/9b851068-3ce5-9649-26b3-3fb79ec4df96/artwork.jpg/1000x1000bb.webp",
-    release_date: "April 17, 2020",
+    title: "Alchemy",
+    img: "https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/d5/c3/86/d5c3864f-eb14-439a-7256-194e71fd97a6/artwork.jpg/1000x1000bb.webp",
+    release_date: "March 15, 2019",
     youtube_embed: "",
-    url: "#"
-  },
-  {
-    title: "Two Gold - Single",
-    img: "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/ad/53/3a/ad533ae1-63f2-33c1-cab1-f97662b89ea2/artwork.jpg/1000x1000bb.webp",
-    release_date: "July 5, 2019",
-    youtube_embed: "",
-    url: "#"
+    url: "http://hyperurl.co/o5mai0"
   },
 ]
 
@@ -47,9 +61,8 @@ const full = [
 exports.featured_music = [
   full[0],
   full[1],
-  full[2],
-  full[3],
   full[4],
+  full[6],
   full[5]
 ];
 

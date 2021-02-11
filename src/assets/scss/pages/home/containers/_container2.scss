@@ -63,12 +63,28 @@
         }
   
         ul {
-          transform: translateY(-15%);
+          
+          display: inline-block;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
+
+          @include medium {
+            margin-bottom: 3rem;
+          }
+
+          @include large {
+            margin-top: 0;
+            margin-bottom: 0;
+            transform: translateY(-50%) translateX(-50%);
+            position: relative;
+            top: 40%;
+            left: 50%;
+          }
   
           li {
             list-style: none;
   
-            &.h2 {
+            &.h1 { 
               &.em {
                 color: $color-primary;
               }
