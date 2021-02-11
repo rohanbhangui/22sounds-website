@@ -12,9 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("header.header .mobile-open-button i").addEventListener('click', event => {
     document.querySelector("header.header .links").classList.add("mobile-open");
   });
-
-
-  debugger;
+  
   // for mobile menu close
   document.querySelector("header.header .links .mobile-close-button i").addEventListener('click', event => {
     document.querySelector("header.header .links").classList.remove("mobile-open");
