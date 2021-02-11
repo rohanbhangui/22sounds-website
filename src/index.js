@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("header.header .mobile-open-button i").addEventListener('click', event => {
     document.querySelector("header.header .links").classList.add("mobile-open");
   });
-  
+
   // for mobile menu close
   document.querySelector("header.header .links .mobile-close-button i").addEventListener('click', event => {
     document.querySelector("header.header .links").classList.remove("mobile-open");
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".sounds-text").classList.add("active");
     }, LOADING_TIMER+1750);
     
-    if(window.scrollY >= window.innerHeight/2) {
+    if(window.scrollY >= window.innerHeight*3/4) {
       document.querySelector("header.header").classList.add("show");
       // document.querySelector("#container-1 video").classList.add("show");
     }
