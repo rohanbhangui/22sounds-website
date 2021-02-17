@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, LOADING_TIMER+2750);
 
     window.addEventListener('scroll', (e) => {
-      if(window.scrollY >= 20) {
+      if(window.scrollY >= 0) {
         document.querySelector("header.header").classList.add("show");
       }
     });
