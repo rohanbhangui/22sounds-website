@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   if(document.querySelector("body").classList.contains("index")) {
+
+    document.querySelector("#container-1").style.height = `${window.innerHeight - document.querySelector("header.header").offsetHeight}px`
+    
     const LOADING_TIMER = 500;
     setTimeout(() => {
       document.querySelector(".numbers-1").classList.add("active");
