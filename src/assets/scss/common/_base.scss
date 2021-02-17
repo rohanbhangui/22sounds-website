@@ -288,6 +288,10 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 
+	@include xx-large {
+		max-width: 90rem;
+	}
+
 	&.sm {
 		max-width: 60rem;
 	}
