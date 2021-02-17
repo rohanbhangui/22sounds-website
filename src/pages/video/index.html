@@ -7,8 +7,10 @@
 <body class="video">
   <%= require('html-loader!../../assets/partials/header.html') %>
   <main>
-    <div class="restrict-container lg">
+    <div class="restrict-container title">
       <h1 class="h2">Video</h1>
+    </div>
+    <div class="restrict-container">
       <div class="videos-container">
         <% for(var [index, item] of full_videography.entries()) { %>
           <% if(index == 0) { %>

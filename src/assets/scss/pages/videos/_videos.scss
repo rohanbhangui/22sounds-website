@@ -8,6 +8,11 @@ body.video {
     
     .restrict-container {
       padding: 0 0 4rem;
+
+      &.title {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+      }
     }
 
     h1.h2 {
@@ -101,6 +106,10 @@ body.video {
 
                 @include large {
                   order: 1;
+                }
+
+                h3 {
+
                 }
               }
             }
