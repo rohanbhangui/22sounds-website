@@ -19,7 +19,7 @@
 
       h3 {
         margin-bottom: 2rem;
-        text-align: center;
+        @include center-secondary;
   
         @include x-large {
           text-align: left;

@@ -7,7 +7,6 @@ body.video {
     overflow-x: hidden;
     
     .restrict-container {
-      padding: 0 0 4rem;
 
       &.title {
         padding-left: 0.8rem;
@@ -18,7 +17,7 @@ body.video {
     h1.h2 {
       margin-top: 6rem;
       margin-bottom: 2rem;
-      text-align: center;
+      @include center-secondary;
 
       @include medium {
         text-align: left;
