@@ -8,8 +8,16 @@ const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //installed via npm
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
 
 const buildPath = path.resolve(__dirname, 'dist');
+
+const paths = [
+  '/',
+  '/music/',
+  '/video/',
+  '/contact/'
+];
 
 module.exports = {
   entry: { index: path.resolve(__dirname, "src", "index.js") },
@@ -123,5 +131,6 @@ module.exports = {
         { from: "src/assets/img", to: "assets/img" }
       ],
     }),
+    new SitemapPlugin({ base: 'https://22sounds.com', paths })
   ]
 };
