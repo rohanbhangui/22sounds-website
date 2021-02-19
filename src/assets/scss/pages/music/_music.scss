@@ -6,6 +6,10 @@ body.discography {
     
     .restrict-container {
       padding: 0 0.8rem 4rem;
+
+      @include medium {
+        padding: 0 0.8rem 6rem;
+      }
     }
 
     h1.h2 {
