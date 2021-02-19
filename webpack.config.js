@@ -110,13 +110,17 @@ module.exports = {
         'full_videography': full_videos
       }
     }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/404/index.html',
+      filename: './404.html',
+    }),
     new MiniCssExtractPlugin({
       filename: "assets/styles/index.css",
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/img", to: "assets/img" },
-        { from: "src/404.html", to: "404.html" },
+        { from: "src/assets/img", to: "assets/img" }
       ],
     }),
   ]

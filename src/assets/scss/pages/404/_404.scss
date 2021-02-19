@@ -1,0 +1,41 @@
+body.error-page {
+  color: white;
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height});
+
+    @include medium {
+      min-height: calc(100vh - #{$header-height} - #{$footer-height});
+    }
+    
+    .content-container {
+      text-align: center;
+
+      > * {
+        flex: 0 0 100%;
+      }
+
+      h2, h4 {
+        transform: scaleX(0.9) translateX(5%);
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+      }
+
+      h4 {
+        margin-bottom: 3rem;
+      }
+  
+      button {
+        display: inline-block;
+        flex: 1 0 auto;
+        border: none;
+      }
+    }
+  }
+}

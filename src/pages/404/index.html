@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!../../assets/partials/head.html') %>
+  <title>22Sounds</title>
+</head>
+<body class="error-page">
+  <%= require('html-loader!../../assets/partials/header.html') %>
+  <main>
+    <div class="restrict-container sm">
+      <div class="content-container">
+        <h2>OOPS!</h2>
+        <h4>We could not find what you were looking for.</h4>
+        <button class="button primary" onClick="(function(){
+            window.history.back();
+            return false;
+        })();">Go Back</button>
+      </div>
+    </div>
+  </main>
+  <%= require('html-loader!../../assets/partials/footer.html') %>
+</body>
+</html>

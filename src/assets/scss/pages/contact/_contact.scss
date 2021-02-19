@@ -1,8 +1,15 @@
 body.contact {
   color: white;
 
+  $content-mobile-margin-top: 6rem;
+  $content-margin-top: 8rem;
+
   main {
-    min-height: 100vh;
+    min-height: calc(100vh - #{$header-height} - #{$footer-height} - #{$content-mobile-margin-top});
+
+    @include medium {
+      min-height: calc(100vh - #{$header-height} - #{$footer-height} - #{$content-margin-top});
+    }
     
     .restrict-container.lg {
       padding: 0 0.8rem 4rem;
