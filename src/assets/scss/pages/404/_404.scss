@@ -20,7 +20,7 @@ body.error-page {
       }
 
       h2, h4 {
-        transform: scaleX(0.9) translateX(5%);
+        @include center-secondary;
       }
 
       h2 {

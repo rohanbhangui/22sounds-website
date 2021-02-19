@@ -18,10 +18,9 @@ body.contact {
     h1.h2 {
       margin-top: 6rem;
       margin-bottom: 2rem;
-      text-align: center;
+      @include center-secondary;
 
       @include medium {
-        text-align: center;
         margin-top: 8rem;
         margin-bottom: 4rem;
       }

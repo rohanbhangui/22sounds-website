@@ -17,6 +17,11 @@ $font-secondary: nimbus-sans-extended, sans-serif;
   line-height: 1;
 }
 
+@mixin center-secondary {
+  text-align: center;
+  transform: scaleX(0.9) translateX(5%);
+}
+
 //Media queries
 $x-small: 320px;
 $small: 480px;

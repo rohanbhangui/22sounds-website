@@ -18,7 +18,7 @@ body.video {
     h1.h2 {
       margin-top: 6rem;
       margin-bottom: 2rem;
-      text-align: center;
+      @include center-secondary;
 
       @include medium {
         text-align: left;
