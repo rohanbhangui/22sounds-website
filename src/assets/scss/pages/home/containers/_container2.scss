@@ -1,0 +1,147 @@
+#container-2 {
+  color: white;
+
+  .restrict-container {
+    margin: 4rem auto;
+    
+
+    .grid-container {
+      display: flex;
+      flex-wrap: wrap;
+      
+      @include x-large {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "a a"
+          "c b";
+
+        @include large {
+          grid-template-rows: 1fr 0.6fr;
+        }
+      }
+
+      .a {
+        grid-area: a;
+        max-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+
+        @include small {
+          max-height: 30rem;
+        }
+
+        @include medium {
+          max-height: 40rem;
+        }
+  
+        img {
+          width: 100%;
+          height: 100%;
+          padding: 0 1rem;
+          object-fit: cover;
+          object-position: center;
+
+          @include xx-large {
+            padding: 0;
+          }
+        }
+      }
+      
+      .b {
+        grid-area: b;
+        padding-left: 1rem;
+  
+        @include small {
+          padding-left: 2rem;
+        }
+  
+        @include x-large {
+          padding-left: 0rem;
+        }
+  
+        ul {
+          transform: translateY(-15%);
+  
+          li {
+            list-style: none;
+  
+            &.h1, &.h2 {
+              &.em {
+                color: $color-primary;
+              }
+            }
+          }
+
+          &.artist {
+            display: inline-block;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+
+            @include x-large {
+              margin-top: 0;
+              margin-bottom: 0;
+              transform: translateY(-50%) translateX(-50%);
+              position: relative;
+              top: 40%;
+              left: 50%;
+            }
+          }
+        }
+        
+      }
+      
+      .c { 
+        grid-area: c;
+  
+        padding: 0rem 1rem 3rem;
+        
+        @include small {
+          padding: 0rem 2rem 3rem;
+        }
+  
+        @include x-large {
+          padding: 3rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          margin-bottom: 1rem;
+          font-weight: normal;
+          color: rgba(255, 255, 255, 0.33);
+        }
+      }
+    }
+  }
+
+  // h1 {
+  //   color: white;
+
+  //   &.nimbus {
+  //     font-family: nimbus-sans-extended, sans-serif;
+  //     font-weight: 900;
+  //     font-style: normal;
+  //     transform: scaleY(1.1);
+  //   }
+
+  //   &.pragmatic {
+  //     font-family: pragmatica-extended, sans-serif;
+  //     font-weight: 900;
+  //     font-style: normal;
+  //   }
+
+  //   &.aktiv {
+  //     font-family: aktiv-grotesk-extended, sans-serif;
+  //     font-weight: 900;
+  //     font-style: normal;
+  //   }
+  // }
+
+  // h5 {
+  //   color: white;
+  //   margin-top: 3rem;
+  // }
+}

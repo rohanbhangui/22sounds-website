@@ -1,0 +1,302 @@
+//Common Styles
+.button, button {
+	text-decoration: none;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	font-family: $font-primary;
+	font-size: 13px;
+	letter-spacing: 1px;
+	cursor: pointer;
+	text-align: center;
+
+	&.primary {
+		background: $color-primary linear-gradient(to bottom, white 99%, $color-primary 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: white;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: $color-primary linear-gradient(90deg, white 99%, $color-primary 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
+	}
+
+	&.secondary {
+		border: 2px solid $color-primary;
+		color: $color-primary;
+		font-weight: 600;
+
+		background: rgba(0, 0, 0, 0) linear-gradient(to bottom, $color-primary 99%, rgba(0, 0, 0, 0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0) linear-gradient(90deg, $color-primary 99%, rgba(0, 0, 0, 0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: black;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
+	}
+
+	&.alt-primary {
+		border: 2px solid #fff;
+		background: #fff;
+		color: #000;
+
+		// &:hover {
+		// 	background: $color-primary;
+		// 	border: 2px solid $color-primary;
+		// 	color: #fff;
+		// }
+	}
+
+	&.alt-secondary {
+		border: 2px solid #fff;
+		color: white;
+
+		background: rgba(0, 0, 0, 0) linear-gradient(to bottom, white 99%, rgba(0, 0, 0, 0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: white;
+		border: 2px solid white;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0, 0, 0, 0) linear-gradient(90deg, white 99%, rgba(0, 0, 0, 0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
+	}
+
+	&.alt-tertiary {
+		background: rgba(0,0,0,0) linear-gradient(to bottom, black 99%, rgba(0,0,0,0) 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 0%;
+		color: black;
+		border: 2px solid black;
+		transition: background-size 0.3s cubic-bezier(0.77, 0, 0.175, 1), color 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+
+		&:hover {
+			background: rgba(0,0,0,0) linear-gradient(90deg, black 99%, rgba(0,0,0,0) 100%);
+			background-position: 0 100%;
+			background-repeat: repeat-x;
+			background-size: 4px 100%;
+			color: $color-primary;
+		}
+
+		i {
+			margin-left: 0.3rem;
+		}
+	} 
+
+	&:active {
+		position: relative;
+		top: 1px;
+	}
+}
+
+
+.h1, h1 {
+	$base-size: 3.125rem;
+	$base-letter-spacing: -0.125rem;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
+  margin: 0;
+	@include bold-ext;
+	
+	@include medium {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
+	}
+}
+
+.h2, h2 {
+	$base-size: 2.625rem;
+	$base-letter-spacing: -0.125rem;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
+	font-weight: 500;
+  @include bold-ext;
+
+	@include medium {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
+	}
+}
+
+.h3, h3 {
+	$base-size: 2.1875rem;
+	$base-letter-spacing: -0.04125rem;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
+	font-weight: 600;
+	padding: 0 0.1rem;
+	@include bold-ext;
+
+	background: linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 0.25rem 25%;
+
+	@include medium {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+}
+
+.h4, h4 {
+	$base-size: 1.3125rem;
+	$base-letter-spacing: -0.030625rem;
+
+	font-size: $base-size;
+	letter-spacing: $base-letter-spacing;
+  font-weight: 400;
+  @include bold-ext;
+
+	@include medium {
+		font-size: $base-size*1.429;
+		letter-spacing: $base-letter-spacing*1.429;
+	}
+
+	@include x-large {
+		font-size: $base-size*1.429*1.561;
+		letter-spacing: $base-letter-spacing*1.429*1.561;
+	}
+}
+
+.h5, h5 {
+	font-size: 1.125rem;
+	letter-spacing: -0.030625rem;
+  font-weight: 400;
+  @include bold-ext;
+
+	// @include x-large {
+	// 	font-size: 35.5px;
+	// 	letter-spacing: -0.66px;
+	// }
+}
+
+h6, .h6 {
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1rem;
+	font-weight: normal;
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.social-link {
+	&, &:hover, &:active, &:visited {
+		color: black;
+	}
+
+	.fab {
+		font-size: 31px;
+		margin: 0 3px;
+
+		@include small {
+			margin: 0 6px;
+		}
+	}
+}
+
+a {
+ & , &:visited {
+	 color: white;
+ }	
+}
+
+//Section style
+
+.inverted {
+	background: black;
+	color: white;
+
+	.social-link {
+		&, &:hover, &:active, &:visited {
+			color: white;
+		}
+	}
+}
+
+::selection {
+  background: #ccc;
+}
+::-moz-selection {
+  background: #ccc;
+}
+
+
+* {
+	font-family: $font-primary;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.restrict-container {
+	max-width: 75rem;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include xxx-large {
+		max-width: 90rem;
+	}
+
+	&.sm {
+		max-width: 60rem;
+	}
+
+	&.lg {
+		max-width: 90rem;
+	}
+}

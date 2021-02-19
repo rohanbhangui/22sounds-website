@@ -1,0 +1,95 @@
+#container-3 {
+  color: white;
+  overflow: hidden;
+  padding-left: 1rem;
+  margin-bottom: 4rem;
+
+  @include large {
+    margin-bottom: 8rem;
+  }
+
+  h3 {
+    display: inline-block;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+
+  .glide {
+    .glide__track {
+      overflow: visible;
+  
+      .glide__slide {
+        .tile {
+          max-width: 30rem;
+          display: inline-block;
+          opacity: 0.33;
+          transition: opacity 0.25s cubic-bezier(0.77, 0, 0.175, 1);
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // transform: scale(0.8);
+            // opacity: 0.33;
+            // transform-origin: bottom left;
+            transition: opacity 0.3s cubic-bezier(0.77, 0, 0.175, 1), transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+          }
+  
+          .title {
+            margin-top: 1rem;
+            font-family: $font-primary;
+            font-weight: 500;
+            font-size: 1.5rem;
+            letter-spacing: -0.01rem;
+            margin-bottom: 0.5rem;
+          }
+  
+          a {
+            display: inline-block;
+          }
+
+          &.more {
+            opacity: 1;
+            padding-top: 100%;
+            width: 100%;
+            position: relative;
+
+            a {
+              position: absolute;
+              top: 0;
+              left: 0; 
+              right: 0;
+              bottom: 0;
+
+              .content {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+
+                .fa-circle {
+                  color: $color-primary;
+                }
+
+                h6 {
+                  margin-top: 1rem;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+    
+        &--active {
+          .tile {
+            opacity: 1;
+            img {
+              // transform: scale(1);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

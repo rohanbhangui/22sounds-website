@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('html-loader!../../assets/partials/head.html') %>
+  <title>22Sounds</title>
+</head>
+<body class="video">
+  <%= require('html-loader!../../assets/partials/header.html') %>
+  <main>
+    <div class="restrict-container title">
+      <h1 class="h2">Video</h1>
+    </div>
+    <div class="restrict-container">
+      <div class="videos-container">
+        <% for(var [index, item] of full_videography.entries()) { %>
+          <% if(index == 0) { %>
+            <div class="featured">
+              <img src="<%= item.img %>" alt="" />
+              <div class="content-block">
+                <h6 class="badge">New Release</h6>
+                <h3 class="title"><%= item.title %></h3>
+                <a href="<%= item.url %>" class="button alt-secondary">Watch</a>
+              </div>
+            </div>
+          <% } else if(index % 7 == 0) { %>
+            <div class="wide-banner <%= index % 14 == 0 ? 'invert' : '' %>">
+              <div class="flex-container">
+                <div class="flex-item img">
+                  <img src="<%= item.img %>" alt="" />
+                </div>
+                <div class="flex-item content-block">
+                  <div class="inner-content">
+                    <h6>Released <%= item.release_date %></h6>
+                    <h4 class="title"><%= item.title %></h4>
+                    <a href="<%= item.url %>" class="button secondary">Watch</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if(index % 7 == 1) { %>
+            <div class="grid-container">
+          <% } %>
+          <% if(index % 7 != 0) { %>
+            <div class="tile <%= index != 0 && index % 7 == 2 || index % 7 == 5 ? 'middle' : '' %>">
+              <div class="content-container" onClick="(function(){
+                    if(window.matchMedia('(max-width: 768px)').matches) window.location = '<%= item.url %>';
+                    return false;
+                })();">
+                <img src="<%= item.img %>" alt="" />
+                <div class="content-block"                                                                                                                                                                                                                                                                                                 >
+                  <div class="inner-content">
+                    <div class="title"><%= item.title %></div>
+                    <h6>Released <%= item.release_date %></h6>
+                    <a href="<%= item.url %>" class="button primary">Watch</a>
+                  </div>
+                  <a href="<%= item.url %>" class="play-button"></a>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if(index % 7 == 6) { %>
+            </div>
+          <% } %>         
+        <% } %>
+      </div>
+    </div>
+  </main>
+  <%= require('html-loader!../../assets/partials/footer.html') %>
+</body>
+</html>

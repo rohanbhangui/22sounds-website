@@ -1,7 +1,10 @@
 const path = require("path");
 
+const { featured_music, full_music } = require("./src/pages/music/discography.js");
+const { featured_video, full_videos } = require("./src/pages/video/videography.js");
+
+
 const CopyPlugin = require("copy-webpack-plugin");
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //installed via npm
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -26,12 +29,23 @@ module.exports = {
               implementation: require("sass"),
             },
           },
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: require(path.join(process.cwd(), "src/assets/scss/utils.js"))
+            }
+          }
         ]
       },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
+        use: [{
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]  //Preset used for env setup
+          }
+        }]
       },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
@@ -40,7 +54,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-                name: '[path][name].[ext]',
+                name: 'assets/img/[name].[ext]',
                 limit: 8192
             }
           }
@@ -68,14 +82,45 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html")
+      inject: 'body',
+      template: './src/index.html',
+      filename: 'index.html',
+      templateParameters: {
+        'featured_discography': featured_music
+      }
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/contact/index.html',
+      filename: './contact/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/music/index.html',
+      filename: './music/index.html',
+      templateParameters: {
+        'full_discography': full_music
+      }
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/video/index.html',
+      filename: './video/index.html',
+      templateParameters: {
+        'full_videography': full_videos
+      }
+    }),
+    new HtmlWebpackPlugin({
+      inject: 'body',
+      template: './src/pages/404/index.html',
+      filename: './404.html',
     }),
     new MiniCssExtractPlugin({
       filename: "assets/styles/index.css",
     }),
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/img/favicon", to: "favicon" },
+        { from: "src/assets/img", to: "assets/img" }
       ],
     }),
   ]
