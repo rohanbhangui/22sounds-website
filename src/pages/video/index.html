@@ -19,7 +19,7 @@
               <div class="content-block">
                 <h6 class="badge">New Release</h6>
                 <h3 class="title"><%= item.title %></h3>
-                <a href="<%= item.url %>" class="button alt-secondary">Watch</a>
+                <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer" class="button alt-secondary">Watch</a>
               </div>
             </div>
           <% } else if(index % 7 == 0) { %>
@@ -32,7 +32,7 @@
                   <div class="inner-content">
                     <h6>Released <%= item.release_date %></h6>
                     <h4 class="title"><%= item.title %></h4>
-                    <a href="<%= item.url %>" class="button secondary">Watch</a>
+                    <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer" class="button secondary">Watch</a>
                   </div>
                 </div>
               </div>
@@ -52,9 +52,9 @@
                   <div class="inner-content">
                     <div class="title"><%= item.title %></div>
                     <h6>Released <%= item.release_date %></h6>
-                    <a href="<%= item.url %>" class="button primary">Watch</a>
+                    <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer" class="button primary">Watch</a>
                   </div>
-                  <a href="<%= item.url %>" class="play-button"></a>
+                  <a href="<%= item.url %>" target="_blank" rel="noopener noreferrer" class="play-button"></a>
                 </div>
               </div>
             </div>
