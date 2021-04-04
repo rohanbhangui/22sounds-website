@@ -94,6 +94,8 @@ body.discography {
 
               .consume {
                 margin: 1.5rem 0 1rem;
+                transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+                transform: translateY(1rem);
 
                 a {
                   display: inline-block;
@@ -105,10 +107,14 @@ body.discography {
                 text-align: center;
                 font-weight: 500;
                 margin-bottom: 0.25rem;
+                transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+                transform: translateY(1rem);
               }
 
               p.h6 {
                 color: rgba(255, 255, 255, 0.5);
+                transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+                transform: translateY(1rem);
               }
             }
           }
@@ -119,6 +125,10 @@ body.discography {
               z-index: 1;   
               pointer-events: auto;
               opacity: 1;
+
+              .consume, .title, p.h6 {
+                transform: translateY(0rem);
+              }
             }
           }
         }
