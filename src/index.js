@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   if(document.querySelector("body").classList.contains("index")) {
+    
 
     document.querySelector("#container-1").style.height = `${window.innerHeight - document.querySelector("header.header").offsetHeight}px`
     
@@ -36,12 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if(window.scrollY >= window.innerHeight*3/4) {
       document.querySelector("header.header").classList.add("show");
-      // document.querySelector("#container-1 video").classList.add("show");
+      // document.querySelector("#container-1 #background-video").classList.add("show");
     }
     
     setTimeout(() => {
       document.querySelector("header.header").classList.add("show");
-      // document.querySelector("#container-1 video").classList.add("show");
+      // document.querySelector("#container-1 #background-video").classList.add("show");
     }, LOADING_TIMER+2750);
 
     window.addEventListener('scroll', (e) => {
