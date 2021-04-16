@@ -51,10 +51,11 @@
     position: relative;
     top: -10vmin;
 
-    // @include medium {
-    //   width: 90vmin;
-    //   height: 90vmin;
-    // }
+    @include medium {
+      width: 100vmin;
+      height: 100vmin;
+      top: 0;
+    }
 
     // .overlay  {
     //   -moz-box-shadow: inset 0 0 500px 50px $color-primary-dark,  0 0 500px 50px $color-primary-dark;
