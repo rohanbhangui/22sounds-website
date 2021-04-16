@@ -20,13 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   if(document.querySelector("body").classList.contains("index")) {
+    
 
     document.querySelector("#container-1").style.height = `${window.innerHeight - document.querySelector("header.header").offsetHeight}px`
     
     const LOADING_TIMER = 500;
     setTimeout(() => {
       document.querySelector(".numbers-1").classList.add("active");
-    }, 500);
+    }, LOADING_TIMER);
     setTimeout(() => {
       document.querySelector(".numbers-2").classList.add("active");
     }, LOADING_TIMER+1000);
@@ -36,13 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if(window.scrollY >= window.innerHeight*3/4) {
       document.querySelector("header.header").classList.add("show");
-      // document.querySelector("#container-1 video").classList.add("show");
+      // document.querySelector("#container-1 #background-video").classList.add("show");
     }
     
     setTimeout(() => {
       document.querySelector("header.header").classList.add("show");
-      // document.querySelector("#container-1 video").classList.add("show");
-    }, LOADING_TIMER+2750);
+      // document.querySelector("#container-1 #background-video").classList.add("show");
+    }, LOADING_TIMER);
 
     window.addEventListener('scroll', (e) => {
       if(window.scrollY >= 0) {
