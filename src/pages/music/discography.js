@@ -1,5 +1,12 @@
 const full = [
   {
+    title: "Dusty Winds - Single",
+    img: `https://united-masters.imgix.net/mUVEaQ5pBu9d?fit=crop&w=800&h=800&q=80`,
+    release_date: "February 22, 2022",
+    youtube_embed: "",
+    url: "https://untd.io/m/dustywinds",
+  },
+  {
     title: "Where Do We Go - Single",
     img: "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/21/09/6f21093c-8e44-95fc-718f-3778bcadbe3a/artwork.jpg/1000x1000bb.webp",
     release_date: "November 25, 2020",
@@ -60,10 +67,10 @@ const full = [
 
 exports.featured_music = [
   full[0],
-  full[1],
-  full[4],
-  full[6],
-  full[5]
+  full[2],
+  full[5],
+  full[7],
+  full[6]
 ];
 
 exports.full_music = full
