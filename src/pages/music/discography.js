@@ -67,6 +67,7 @@ const full = [
 
 exports.featured_music = [
   full[0],
+  full[1],
   full[2],
   full[5],
   full[7],
