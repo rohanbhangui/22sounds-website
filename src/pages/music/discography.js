@@ -2,7 +2,7 @@ const full = [
   {
     title: "Dusty Winds - Single",
     img: `https://united-masters.imgix.net/mUVEaQ5pBu9d?fit=crop&w=800&h=800&q=80`,
-    release_date: "February 22, 2022",
+    release_date: "March 4th, 2022",
     youtube_embed: "",
     url: "https://untd.io/m/dustywinds",
   },
