@@ -4,7 +4,7 @@ const full = [
     img: "https://i1.sndcdn.com/artworks-htWIuYiF0Nit8TYP-GBMoOA-t500x500.jpg",
     release_date: "October 1, 2022",
     youtube_embed: "https://www.youtube.com/embed/MUu3tVoLPEI?vq=hd1080&modestbranding=1&theme=light&color=white",
-    url: "https://fanlink.to/dustywinds22",
+    url: "https://fanlink.to/dustywinds22"
   },
   {
     title: "Where Do We Go - Single",
@@ -66,7 +66,7 @@ const full = [
 
 
 exports.featured_music = [
-  full[0]
+  full[0],
   full[1],
   full[2],
   full[5],
