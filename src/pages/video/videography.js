@@ -1,5 +1,12 @@
 const full = [
   {
+    title: "Dusty Winds",
+    img: "https://i1.sndcdn.com/artworks-htWIuYiF0Nit8TYP-GBMoOA-t500x500.jpg",
+    release_date: "October 1, 2022",
+    youtube_embed: "https://www.youtube.com/embed/MUu3tVoLPEI?vq=hd1080&modestbranding=1&theme=light&color=white",
+    url: "https://fanlink.to/dustywinds22",
+  },
+  {
     title: "Where Do We Go",
     img: "https://res.cloudinary.com/a22sounds/image/upload/v1613519880/videos/where-do-we-go-cover_m57gzx.jpg",
     release_date: "February 18, 2021",
@@ -18,7 +25,8 @@ const full = [
 
 exports.featured_videos = [
   full[0],
-  full[1]
+  full[1],
+  full[2]
 ];
 
 exports.full_videos = full
