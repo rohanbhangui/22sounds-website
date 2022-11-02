@@ -1,7 +1,7 @@
 const full = [
   {
     title: "Dusty Winds",
-    img: "https://i1.sndcdn.com/artworks-htWIuYiF0Nit8TYP-GBMoOA-t500x500.jpg",
+    img: "https://res.cloudinary.com/a22sounds/image/upload/v1667392920/videos/dusty-winds-cover_x6dsqs.jpg",
     release_date: "October 1, 2022",
     youtube_embed: "https://www.youtube.com/embed/MUu3tVoLPEI?vq=hd1080&modestbranding=1&theme=light&color=white",
     url: "https://fanlink.to/dustywinds22",
