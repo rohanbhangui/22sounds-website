@@ -3,6 +3,19 @@ footer {
   color: white;
   padding: 2rem 1rem;
   height: $footer-height;
+
+  .sponsors {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 12rem;
+      width: 100%;
+    }
+  }
   
   .grid-container {
     display: flex;
